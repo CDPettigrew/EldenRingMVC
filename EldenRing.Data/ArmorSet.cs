@@ -13,6 +13,8 @@ namespace EldenRing.Data
     {
         [Key]
         public int ArmorSetId { get; set; }
+        //[Required]
+        //public Guid OwnerId { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]
