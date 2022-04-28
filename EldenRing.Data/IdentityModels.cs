@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using EldenRing.Data;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -29,5 +30,8 @@ namespace EldenRing.WebMVC.Models
         {
             return new ApplicationDbContext();
         }
+        public DbSet<Weapon> Weapons { get; set; }
+        public DbSet<ArmorSet> ArmorSets { get; set; }
+        public DbSet<Location> Locations { get; set; }
     }
 }
