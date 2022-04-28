@@ -15,5 +15,8 @@ namespace EldenRing.Models.WeaponModels
         public string Name { get; set; }
         [Display(Name = "Type of Weapon")]
         public WeaponType TypeOfWeapon { get; set; }
+        [Display(Name = "Physical Damage")]
+        public string PhysicalDamage { get; set; }
+        public int LocationId { get; set; }
     }
 }
