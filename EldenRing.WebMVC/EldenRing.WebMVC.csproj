@@ -175,7 +175,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -252,6 +251,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EldenRing.Data\EldenRing.Data.csproj">
+      <Project>{4ab0464e-3715-428c-b01f-275a5a767451}</Project>
+      <Name>EldenRing.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EldenRing.Models\EldenRing.Models.csproj">
+      <Project>{3863cb98-7295-4ec0-b7b6-42ae0d9effcc}</Project>
+      <Name>EldenRing.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EldenRing.Services\EldenRing.Services.csproj">
+      <Project>{f6bbfb54-1367-4bde-bfce-c88fda4b8cc2}</Project>
+      <Name>EldenRing.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
