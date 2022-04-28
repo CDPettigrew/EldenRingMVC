@@ -11,6 +11,8 @@ namespace EldenRing.Data
     {
         [Key]
         public int LocationId { get; set; }
+        //[Required]
+        //public Guid OwnerId { get; set; }
         public string Name { get; set; }
         public string Region { get; set; }
         public List<Weapon> Weapons { get; set; } = new List<Weapon>();
