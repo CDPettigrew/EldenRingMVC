@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EldenRing.WebMVC", "EldenRing.WebMVC\EldenRing.WebMVC.csproj", "{FCB6BE52-42AE-4181-9FCB-82F72393EC56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EldenRing.Data", "EldenRing.Data\EldenRing.Data.csproj", "{4AB0464E-3715-428C-B01F-275A5A767451}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EldenRing.Models", "EldenRing.Models\EldenRing.Models.csproj", "{3863CB98-7295-4EC0-B7B6-42AE0D9EFFCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EldenRing.Services", "EldenRing.Services\EldenRing.Services.csproj", "{F6BBFB54-1367-4BDE-BFCE-C88FDA4B8CC2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCB6BE52-42AE-4181-9FCB-82F72393EC56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB6BE52-42AE-4181-9FCB-82F72393EC56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCB6BE52-42AE-4181-9FCB-82F72393EC56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCB6BE52-42AE-4181-9FCB-82F72393EC56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AB0464E-3715-428C-B01F-275A5A767451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AB0464E-3715-428C-B01F-275A5A767451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AB0464E-3715-428C-B01F-275A5A767451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AB0464E-3715-428C-B01F-275A5A767451}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3863CB98-7295-4EC0-B7B6-42AE0D9EFFCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3863CB98-7295-4EC0-B7B6-42AE0D9EFFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3863CB98-7295-4EC0-B7B6-42AE0D9EFFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3863CB98-7295-4EC0-B7B6-42AE0D9EFFCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6BBFB54-1367-4BDE-BFCE-C88FDA4B8CC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6BBFB54-1367-4BDE-BFCE-C88FDA4B8CC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6BBFB54-1367-4BDE-BFCE-C88FDA4B8CC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6BBFB54-1367-4BDE-BFCE-C88FDA4B8CC2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D5DC0BE-1822-482A-8FA6-BC09C1BD54ED}
+	EndGlobalSection
+EndGlobal
