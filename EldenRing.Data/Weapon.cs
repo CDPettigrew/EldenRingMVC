@@ -10,7 +10,7 @@ namespace EldenRing.Data
 {
     public enum WeaponType 
     { 
-        Dagger, 
+        Dagger = 1, 
         StraighSword, 
         GreatSword, 
         ColossalSword, 
@@ -85,7 +85,7 @@ namespace EldenRing.Data
         [Required]
         public bool Madness { get; set; }
         [ForeignKey("Location")]
-        public int LocationId { get; set; }
+        public int? LocationId { get; set; }
         public virtual Location Location { get; set; }
     }
 }
