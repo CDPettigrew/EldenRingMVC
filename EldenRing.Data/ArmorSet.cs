@@ -32,7 +32,7 @@ namespace EldenRing.Data
         [Required]
         public double HolyProtection { get; set; }
         [ForeignKey("Location")]
-        public int LocationId { get; set; }
+        public int? LocationId { get; set; }
         public virtual Location Location { get; set; }
     }
 }
