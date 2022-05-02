@@ -30,6 +30,7 @@ namespace EldenRing.Services
             {
                 var query = ctx.Locations.Select(l => new LocationListItem
                 {
+                    LocationId = l.LocationId,
                     Name = l.Name,
                     Region = l.Region
                 });
@@ -44,6 +45,7 @@ namespace EldenRing.Services
                 return
                     new LocationDetail
                     {
+                        LocationId = entity.LocationId,
                         Name = entity.Name,
                         Region = entity.Region
                     };
