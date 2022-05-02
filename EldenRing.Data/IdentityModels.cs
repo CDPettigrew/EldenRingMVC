@@ -1,4 +1,6 @@
 ﻿using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using EldenRing.Data;
@@ -33,5 +35,37 @@ namespace EldenRing.WebMVC.Models
         public DbSet<Weapon> Weapons { get; set; }
         public DbSet<ArmorSet> ArmorSets { get; set; }
         public DbSet<Location> Locations { get; set; }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Weapon>()
+                .HasRequired(l => l.Location)
+                .WithMany()
+                .WillCascadeOnDelete(false);
+            modelBuilder.Entity<ArmorSet>()
+                .HasRequired(l => l.Location)
+                .WithMany()
+                .WillCascadeOnDelete(false);
+            modelBuilder
+                .Conventions
+                .Remove<PluralizingTableNameConvention>();
+            modelBuilder
+                .Configurations
+                .Add(new IdentityUserLoginConfiguration())
+                .Add(new IdentityUserRoleConfiguration());
+        }
+    }
+    public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
+    {
+        public IdentityUserLoginConfiguration()
+        {
+            HasKey(IdentityUserLogin => IdentityUserLogin.UserId);
+        }
+    }
+    public class IdentityUserRoleConfiguration : EntityTypeConfiguration<IdentityUserRole>
+    {
+        public IdentityUserRoleConfiguration()
+        {
+            HasKey(iur => iur.UserId);
+        }
     }
 }
