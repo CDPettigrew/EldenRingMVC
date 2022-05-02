@@ -58,7 +58,6 @@ namespace EldenRing.Models.WeaponModels
         public bool Sleep { get; set; }
         [Required]
         public bool Madness { get; set; }
-        [Required]
         public int LocationId { get; set; }
     }
 }
