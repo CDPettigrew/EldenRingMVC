@@ -1,5 +1,4 @@
 ﻿@model EldenRing.Models.LocationModels.LocationDetail
-
 @{
     ViewBag.Title = "Details";
 }
@@ -35,6 +34,46 @@
         </dd>
 
     </dl>
+
+    <table class="WeaponTable">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Weapons)
+            </th>
+        </tr>
+
+        @foreach (var item in Model.Weapons)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeOfWeapon)
+                </td>
+            </tr>
+        }
+    </table>
+
+    <table class="ArmorTable">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ArmorSets)
+            </th>
+        </tr>
+
+        @foreach (var item in Model.ArmorSets)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeOfArmor)
+                </td>
+            </tr>
+        }
+    </table>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.LocationId }) |
