@@ -10,7 +10,6 @@ namespace EldenRing.WebMVC.Controllers
 {
     public class WeaponController : Controller
     {
-
         //GET: Weapon/Details
         public ActionResult Details(int id)
         {
