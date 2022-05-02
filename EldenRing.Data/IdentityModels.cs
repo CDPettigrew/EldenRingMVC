@@ -37,14 +37,14 @@ namespace EldenRing.WebMVC.Models
         public DbSet<Location> Locations { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Weapon>()
+            /*modelBuilder.Entity<Weapon>()
                 .HasRequired(l => l.Location)
                 .WithMany()
                 .WillCascadeOnDelete(false);
             modelBuilder.Entity<ArmorSet>()
                 .HasRequired(l => l.Location)
                 .WithMany()
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(false);*/
             modelBuilder
                 .Conventions
                 .Remove<PluralizingTableNameConvention>();

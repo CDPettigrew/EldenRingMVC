@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using EldenRing.Data;
 using EldenRing.Models.LocationModels;
 using EldenRing.Services;
+using EldenRing.WebMVC.Models;
 
 namespace EldenRing.WebMVC.Controllers
 {
@@ -13,6 +15,21 @@ namespace EldenRing.WebMVC.Controllers
         //GET: Location/Details
         public ActionResult Details(int id)
         {
+            /*var ctx = new ApplicationDbContext();
+            if(id == null)
+            {
+                return View();
+            }
+            Location location = ctx.Locations.Find(id);
+            LocationDetail details = new LocationDetail();
+            {
+                LocationId = location.LocationId,
+                Name = location.Name,
+                Region = location.Region,
+                Weapons = location.Weapons,
+                ArmorSets = location.ArmorSets
+            };
+            return View(details);*/
             var srv = CreateLocationService();
             var model = srv.GetLocationById(id);
             return View(model);

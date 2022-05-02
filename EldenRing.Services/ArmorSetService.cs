@@ -106,7 +106,6 @@ namespace EldenRing.Services
             using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx.ArmorSets.Single(w => w.ArmorSetId == armorSetId);
-                entity.LocationId = null;
                 ctx.ArmorSets.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }

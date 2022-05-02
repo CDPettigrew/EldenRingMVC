@@ -49,6 +49,7 @@ namespace EldenRing.Data
         //[Required]
         //public Guid OwnerId { get; set; }
         [Required]
+        [Display(Name="Weapon Name")]
         public string Name { get; set; }
         [Required]
         public WeaponType TypeOfWeapon { get; set; }
@@ -84,8 +85,8 @@ namespace EldenRing.Data
         public bool Sleep { get; set; }
         [Required]
         public bool Madness { get; set; }
-        [ForeignKey("Location")]
         public int LocationId { get; set; }
+        [ForeignKey(nameof(LocationId))]
         public virtual Location Location { get; set; }
     }
 }

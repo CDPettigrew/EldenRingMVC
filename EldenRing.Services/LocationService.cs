@@ -41,13 +41,15 @@ namespace EldenRing.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity = ctx.Locations.Single(l => l.LocationId == locationId);
+                var entity = ctx.Locations.Single(l => l.LocationId == locationId);//.Weapons.Where(w => w.WeaponId == locationId);
                 return
                     new LocationDetail
                     {
                         LocationId = entity.LocationId,
                         Name = entity.Name,
-                        Region = entity.Region
+                        Region = entity.Region,
+                        Weapons = entity.Weapons,
+                        ArmorSets = entity.ArmorSets
                     };
             }
         }
