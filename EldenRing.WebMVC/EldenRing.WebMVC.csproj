@@ -253,6 +253,7 @@
     <Content Include="Views\Location\Details.cshtml" />
     <Content Include="Views\Location\Delete.cshtml" />
     <Content Include="Views\Location\Create.cshtml" />
+    <Content Include="Views\Location\Map.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
