@@ -12,6 +12,11 @@ namespace EldenRing.WebMVC.Controllers
 {
     public class LocationController : Controller
     {
+        //MAP: Location/Map
+        public ActionResult Map()
+        {
+            return View();
+        }
         //GET: Location/Details
         public ActionResult Details(int id)
         {

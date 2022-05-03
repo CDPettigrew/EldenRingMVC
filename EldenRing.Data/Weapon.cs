@@ -88,5 +88,6 @@ namespace EldenRing.Data
         public int LocationId { get; set; }
         [ForeignKey(nameof(LocationId))]
         public virtual Location Location { get; set; }
+        public Location LocationName { get; set; }
     }
 }

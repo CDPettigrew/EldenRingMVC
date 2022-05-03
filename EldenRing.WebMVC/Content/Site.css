@@ -1,8 +1,7 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿html {
+    height: 100%;
+    font-family: 'Century Gothic';
 }
-
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -22,3 +21,83 @@ select,
 textarea {
     max-width: 280px;
 }
+
+body {
+    font-family: 'Century Gothic';
+    font-weight: 600;
+    background: url(https://i.ytimg.com/vi/5B-OU_FRjQE/maxresdefault.jpg) no-repeat center;
+    color: black;
+    background-size: cover;
+    min-height: 100%;
+}
+
+.jumbotron {
+    background-color: #443f37;
+    color: #c3b590;
+}
+
+h1 {
+    border-bottom: 3px solid #cc9900;
+    color: #996600;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.guide {
+    background-color: #443f37;
+    text-align: center;
+    color: #c3b590;
+    padding: 1rem;
+    margin: 1rem;
+    border: 2px solid #443f37;
+    border-radius: 5px;
+}
+
+.btn {
+    text-align: center;
+    background-color: #443f37;
+    color: #c3b590;
+    font-size: 24px;
+}
+
+a {
+    color: #034af3;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: auto;
+    height: 50px;
+    color: #c3b590;
+}
+
+/* Data Styles -----------*/
+.table {
+}
+
+    .table th {
+        background-color: #443f37;
+        color: #c3b590;
+    }
+
+    .table td {
+
+    }
+
+        .table td a {
+            text-align: center;
+            background-color: #443f37;
+            color: #c3b590;
+            font-size: 12px;
+            border: 2px solid #443f37;
+            border-radius: 5px;
+            padding:.5rem;
+            margin: .5rem;
+            display:inline-block;
+        }
