@@ -35,7 +35,7 @@
 
     </dl>
 
-    <table class="WeaponTable">
+    <table class="table">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Weapons)
@@ -58,7 +58,7 @@
         }
     </table>
 
-    <table class="ArmorTable">
+    <table class="table">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.ArmorSets)
@@ -81,7 +81,8 @@
         }
     </table>
 </div>
-<p>
+<p class="createbtn">
     @Html.ActionLink("Edit", "Edit", new { id = Model.LocationId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
