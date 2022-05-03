@@ -22,19 +22,43 @@ textarea {
     max-width: 280px;
 }
 
+.container {
+    width: 1500px;
+}
+
 body {
     font-family: 'Century Gothic';
     font-weight: 600;
-    background: url(https://i.ytimg.com/vi/5B-OU_FRjQE/maxresdefault.jpg) no-repeat center;
+    background: url(https://i.ytimg.com/vi/5B-OU_FRjQE/maxresdefault.jpg) no-repeat top center fixed;
     color: black;
     background-size: cover;
-    min-height: 100%;
+    height: 100%;
 }
 
 .jumbotron {
     background-color: #443f37;
     color: #c3b590;
 }
+
+.createbtn {
+    background-color: #443f37;
+    text-align: center;
+    font-weight:600;
+    color: #c3b590;
+    padding: .5rem;
+    margin: .5rem 0 0 4.5rem;
+    border: 2px solid #443f37;
+    border-radius: 5px;
+    width:20%;
+}
+
+    .createbtn a {
+        color: #c3b590;
+    }
+
+    p {
+        font-size: 16px;
+    }
 
 h1 {
     border-bottom: 3px solid #cc9900;
@@ -62,7 +86,13 @@ h1 {
     text-align: center;
     background-color: #443f37;
     color: #c3b590;
-    font-size: 24px;
+    font-size: 16px;
+    font-weight:600;
+    padding: .5rem 2rem;
+    margin: .5rem;
+    margin-right: 5rem;
+    border: 2px solid #443f37;
+    border-radius: 5px;
 }
 
 a {
@@ -70,11 +100,25 @@ a {
 }
 
 .footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: auto;
     height: 50px;
     color: #c3b590;
+}
+
+.form-group {
+    background-color: #443f37;
+    color: #c3b590;
+    width: 30%;
+    border: 2px solid #443f37;
+    border-radius: 5px;
+}
+
+.checkbox{
+    position:relative;
+    padding-top: 5px;
+    padding-left: 20px;
 }
 
 /* Data Styles -----------*/
@@ -84,10 +128,13 @@ a {
     .table th {
         background-color: #443f37;
         color: #c3b590;
+        font-size:20px;
     }
 
     .table td {
-
+        background-color: darkgrey;
+        color: #443f37;
+        font-size: 16px;
     }
 
         .table td a {
