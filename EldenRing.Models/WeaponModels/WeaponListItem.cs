@@ -18,5 +18,6 @@ namespace EldenRing.Models.WeaponModels
         [Display(Name = "Physical Damage")]
         public string PhysicalDamage { get; set; }
         public int LocationId { get; set; }
+        public virtual Location Location { get; set; }
     }
 }

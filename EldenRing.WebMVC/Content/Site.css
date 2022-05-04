@@ -23,7 +23,13 @@ textarea {
 }
 
 .container {
-    width: 1500px;
+    width: 85%;
+    align-content: center;
+}
+
+header {
+    display: grid;
+    place-items: center;
 }
 
 body {
@@ -36,8 +42,10 @@ body {
 }
 
 .jumbotron {
+    background: url(https://media.distractify.com/brand-img/VLydU_Rg1/0x0/elden-ring-1646338546683.jpg) no-repeat center;
     background-color: #443f37;
     color: #c3b590;
+    width: auto;
 }
 
 .createbtn {
@@ -61,8 +69,22 @@ body {
     }
 
 h1 {
-    border-bottom: 3px solid #cc9900;
+    border-bottom: 3px solid #c3b590;
     color: #996600;
+}
+
+h4 {
+    background-color: #443f37;
+    color: #c3b590;
+    padding: 1rem;
+    margin: 1rem;
+    width: 20%;
+    border: 3px solid #c3b590;
+    border-radius: 5px;
+}
+
+.extra{
+    margin-bottom: 3.75rem;
 }
 
 .dl-horizontal {
@@ -134,12 +156,14 @@ a {
 
 /* Data Styles -----------*/
 .table {
+    width:inherit;
 }
 
     .table th {
         background-color: #443f37;
         color: #c3b590;
         font-size:20px;
+        width: unset;
     }
 
     .table td {

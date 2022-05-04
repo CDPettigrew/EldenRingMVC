@@ -51,7 +51,7 @@ namespace EldenRing.Services
                     Name = e.Name,
                     TypeOfWeapon = e.TypeOfWeapon,
                     PhysicalDamage = e.PhysicalDamage,
-                    LocationId = e.LocationId
+                    LocationId = (int)e.LocationId
                 });
                 return query.ToArray();
             }
@@ -83,7 +83,7 @@ namespace EldenRing.Services
                         ScarletRot = entity.ScarletRot,
                         Sleep = entity.Sleep,
                         Madness = entity.Madness,
-                        LocationId = entity.LocationId
+                        LocationId = (int)entity.LocationId
                     };
             }
         }
@@ -134,7 +134,6 @@ namespace EldenRing.Services
             using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx.Weapons.Single(w => w.WeaponId == weaponId);
-                entity.LocationId = 0;
                 ctx.Weapons.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }
