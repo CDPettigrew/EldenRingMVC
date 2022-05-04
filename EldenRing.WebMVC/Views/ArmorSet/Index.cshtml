@@ -39,8 +39,9 @@
             @Html.DisplayNameFor(model => model.LocationId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Location.Name)
+            @Html.DisplayNameFor(model => model.Location)
         </th>
+        <th></th>
     </tr>
 
     @foreach (var item in Model)
@@ -65,7 +66,7 @@
                 @Html.DisplayFor(modelItem => item.LocationId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Location.Name)
+                @Html.DisplayFor(modelItem => item.Location)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.ArmorSetId }) |
