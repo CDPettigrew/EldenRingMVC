@@ -46,7 +46,7 @@ body {
     font-weight:600;
     color: #c3b590;
     padding: .5rem;
-    margin: .5rem 0 0 4.5rem;
+    margin: .5rem 0 0 5rem;
     border: 2px solid #443f37;
     border-radius: 5px;
     width:20%;
@@ -57,7 +57,7 @@ body {
     }
 
     p {
-        font-size: 16px;
+        font-size: 20px;
     }
 
 h1 {
@@ -65,9 +65,20 @@ h1 {
     color: #996600;
 }
 
+.dl-horizontal {
+    background-color: #443f37;
+    color: #c3b590;
+    font-size: 20px;
+    padding: 1rem;
+    margin: 1rem;
+    border: 2px solid #c3b590;
+    border-radius: 7px;
+    width: 45%;
+}
+
 .row {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     margin-right: -15px;
     margin-left: -15px;
 }
@@ -86,11 +97,11 @@ h1 {
     text-align: center;
     background-color: #443f37;
     color: #c3b590;
-    font-size: 16px;
+    font-size: 20px;
     font-weight:600;
     padding: .5rem 2rem;
     margin: .5rem;
-    margin-right: 5rem;
+    margin-right: .5rem;
     border: 2px solid #443f37;
     border-radius: 5px;
 }
