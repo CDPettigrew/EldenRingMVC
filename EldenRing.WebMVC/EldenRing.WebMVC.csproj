@@ -173,6 +173,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SpellController.cs" />
     <Compile Include="Controllers\WeaponController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -254,6 +255,11 @@
     <Content Include="Views\Location\Delete.cshtml" />
     <Content Include="Views\Location\Create.cshtml" />
     <Content Include="Views\Location\Map.cshtml" />
+    <Content Include="Views\Spell\Index.cshtml" />
+    <Content Include="Views\Spell\Create.cshtml" />
+    <Content Include="Views\Spell\Delete.cshtml" />
+    <Content Include="Views\Spell\Details.cshtml" />
+    <Content Include="Views\Spell\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

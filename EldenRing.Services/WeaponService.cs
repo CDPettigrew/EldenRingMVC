@@ -33,7 +33,8 @@ namespace EldenRing.Services
                 ScarletRot = model.ScarletRot,
                 Sleep = model.Sleep,
                 Madness = model.Madness,
-                LocationId = model.LocationId
+                LocationId = model.LocationId,
+                SpellId = model.SpellId
             };
             using(var ctx = new ApplicationDbContext())
             {
@@ -51,7 +52,9 @@ namespace EldenRing.Services
                     Name = e.Name,
                     TypeOfWeapon = e.TypeOfWeapon,
                     PhysicalDamage = e.PhysicalDamage,
-                    LocationId = (int)e.LocationId
+                    LocationId = (int)e.LocationId,
+                    Location = e.Location,
+                    SpellId = (int)e.SpellId
                 });
                 return query.ToArray();
             }
@@ -83,7 +86,9 @@ namespace EldenRing.Services
                         ScarletRot = entity.ScarletRot,
                         Sleep = entity.Sleep,
                         Madness = entity.Madness,
-                        LocationId = (int)entity.LocationId
+                        LocationId = (int)entity.LocationId,
+                        Location = entity.Location,
+                        SpellId = (int)entity.SpellId
                     };
             }
         }
@@ -97,7 +102,8 @@ namespace EldenRing.Services
                     Name = e.Name,
                     TypeOfWeapon = e.TypeOfWeapon,
                     PhysicalDamage = e.PhysicalDamage,
-                    LocationId = e.LocationId
+                    LocationId = (int)e.LocationId,
+                    SpellId = (int)e.SpellId
                 });
                 return query.ToArray();
             }
@@ -126,6 +132,7 @@ namespace EldenRing.Services
                 entity.Sleep = model.Sleep;
                 entity.Madness = model.Madness;
                 entity.LocationId = model.LocationId;
+                entity.SpellId = model.SpellId;
                 return ctx.SaveChanges() == 1;
             }
         }

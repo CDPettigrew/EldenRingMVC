@@ -61,7 +61,7 @@ namespace EldenRing.WebMVC.Controllers
             ModelState.AddModelError("", "Your ArmorSet could not be updated.");
             return View(model);
         }
-        //GET: Weapon/Delete
+        //GET: ArmorSet/Delete
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {

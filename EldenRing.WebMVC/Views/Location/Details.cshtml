@@ -40,8 +40,14 @@
             <th>
                 @Html.DisplayNameFor(model => model.Weapons)
             </th>
-            <th></th>
-            <th></th>
+
+            <th>
+                <p>Weapon Id</p>
+            </th>
+
+            <th>
+                <p>Weapon Type</p>
+            </th>
         </tr>
 
         @foreach (var item in Model.Weapons)
@@ -67,8 +73,14 @@
             <th>
                 @Html.DisplayNameFor(model => model.ArmorSets)
             </th>
-            <th></th>
-            <th></th>
+
+            <th>
+                <p>Armor Id</p>
+            </th>
+
+            <th>
+                <p>Armor Type</p>
+            </th>
         </tr>
 
         @foreach (var item in Model.ArmorSets)
@@ -84,6 +96,39 @@
 
                 <td>
                     @Html.DisplayFor(modelItem => item.TypeOfArmor)
+                </td>
+            </tr>
+        }
+    </table>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Spells)
+            </th>
+
+            <th>
+                <p>Spell Id</p>
+            </th>
+
+            <th>
+                <p>Spell Type</p>
+            </th>
+        </tr>
+
+        @foreach (var item in Model.Spells)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.SpellId)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeOfSpell)
                 </td>
             </tr>
         }

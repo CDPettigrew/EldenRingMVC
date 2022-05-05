@@ -42,7 +42,8 @@ namespace EldenRing.Services
                     TypeOfArmor = w.TypeOfArmor,
                     Pieces = w.Pieces,
                     PhysicalProtection = w.PhysicalProtection,
-                    LocationId = (int)w.LocationId
+                    LocationId = (int)w.LocationId,
+                    Location = w.Location
                 });
                 return query.ToArray();
             }
@@ -64,7 +65,8 @@ namespace EldenRing.Services
                         FireProtection = entity.FireProtection,
                         LightProtection = entity.LightProtection,
                         HolyProtection = entity.HolyProtection,
-                        LocationId = (int)entity.LocationId
+                        LocationId = (int)entity.LocationId,
+                        Location = entity.Location
                     };
             }
         }
