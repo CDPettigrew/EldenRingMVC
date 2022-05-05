@@ -19,5 +19,6 @@ namespace EldenRing.Models.WeaponModels
         public string PhysicalDamage { get; set; }
         public int LocationId { get; set; }
         public virtual Location Location { get; set; }
+        public int SpellId { get; set; }
     }
 }

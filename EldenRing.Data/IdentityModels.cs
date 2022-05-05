@@ -35,13 +35,22 @@ namespace EldenRing.WebMVC.Models
         public DbSet<Weapon> Weapons { get; set; }
         public DbSet<ArmorSet> ArmorSets { get; set; }
         public DbSet<Location> Locations { get; set; }
+        public DbSet<Spell> Spells { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             /*modelBuilder.Entity<Weapon>()
                 .HasRequired(l => l.Location)
                 .WithMany()
                 .WillCascadeOnDelete(false);
+            modelBuilder.Entity<Weapon>()
+                .HasRequired(s => s.Spell)
+                .WithMany()
+                .WillCascadeOnDelete(false);
             modelBuilder.Entity<ArmorSet>()
+                .HasRequired(l => l.Location)
+                .WithMany()
+                .WillCascadeOnDelete(false);
+            modelBuilder.Entity<Spell>()
                 .HasRequired(l => l.Location)
                 .WithMany()
                 .WillCascadeOnDelete(false);*/

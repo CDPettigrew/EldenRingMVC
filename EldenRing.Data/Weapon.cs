@@ -85,9 +85,12 @@ namespace EldenRing.Data
         public bool Sleep { get; set; }
         [Required]
         public bool Madness { get; set; }
-        public int LocationId { get; set; }
+        public int? LocationId { get; set; }
         [ForeignKey(nameof(LocationId))]
         public virtual Location Location { get; set; }
         //public Location LocationName { get; set; }
+        public int? SpellId { get; set; }
+        [ForeignKey(nameof(SpellId))]
+        public virtual Spell Spell { get; set; }
     }
 }

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<EldenRing.Models.SpellModels.SpellListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p class="createbtn">
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SpellId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Incantation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Scorcery)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpellId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Incantation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Scorcery)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SpellId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.SpellId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.SpellId })
+        </td>
+    </tr>
+}
+
+</table>

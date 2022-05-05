@@ -18,5 +18,6 @@ namespace EldenRing.Models.LocationModels
         public string Region { get; set; }
         public List<Weapon> Weapons { get; set; } = new List<Weapon>();
         public List<ArmorSet> ArmorSets { get; set; } = new List<ArmorSet>();
+        public List<Spell> Spells { get; set; } = new List<Spell>();
     }
 }

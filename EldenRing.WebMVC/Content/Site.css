@@ -51,22 +51,22 @@ body {
 .createbtn {
     background-color: #443f37;
     text-align: center;
-    font-weight:600;
+    font-weight: 600;
     color: #c3b590;
     padding: .5rem;
     margin: .5rem 0 0 5rem;
     border: 2px solid #443f37;
     border-radius: 5px;
-    width:20%;
+    width: 20%;
 }
 
     .createbtn a {
         color: #c3b590;
     }
 
-    p {
-        font-size: 20px;
-    }
+p {
+    font-size: 20px;
+}
 
 h1 {
     border-bottom: 3px solid #c3b590;
@@ -78,12 +78,25 @@ h4 {
     color: #c3b590;
     padding: 1rem;
     margin: 1rem;
-    width: 20%;
+    width: 15%;
     border: 3px solid #c3b590;
     border-radius: 5px;
 }
 
-.extra{
+.col-md-10 {
+    padding-right: 1px;
+    padding-left: 47px;
+}
+
+@media (min-width: 992px) {
+
+    .col-md-2 {
+        width: min-content;
+    }
+}
+
+
+.extra {
     margin-bottom: 3.75rem;
 }
 
@@ -120,7 +133,7 @@ h4 {
     background-color: #443f37;
     color: #c3b590;
     font-size: 20px;
-    font-weight:600;
+    font-weight: 600;
     padding: .5rem 2rem;
     margin: .5rem;
     margin-right: .5rem;
@@ -143,26 +156,26 @@ a {
 .form-group {
     background-color: #443f37;
     color: #c3b590;
-    width: 30%;
+    width: 20%;
     border: 2px solid #443f37;
     border-radius: 5px;
 }
 
-.checkbox{
-    position:relative;
+.checkbox {
+    position: relative;
     padding-top: 5px;
     padding-left: 20px;
 }
 
 /* Data Styles -----------*/
 .table {
-    width:inherit;
+    width: inherit;
 }
 
     .table th {
         background-color: #443f37;
         color: #c3b590;
-        font-size:20px;
+        font-size: 20px;
         width: unset;
     }
 
@@ -179,7 +192,7 @@ a {
             font-size: 12px;
             border: 2px solid #443f37;
             border-radius: 5px;
-            padding:.5rem;
+            padding: .5rem;
             margin: .5rem;
-            display:inline-block;
+            display: inline-block;
         }

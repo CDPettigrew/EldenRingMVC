@@ -42,5 +42,6 @@ namespace EldenRing.Models.WeaponModels
         public bool Sleep { get; set; }
         public bool Madness { get; set; }
         public int LocationId { get; set; }
+        public int SpellId { get; set; }
     }
 }

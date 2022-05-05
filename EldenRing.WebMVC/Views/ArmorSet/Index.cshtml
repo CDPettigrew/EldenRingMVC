@@ -39,7 +39,7 @@
             @Html.DisplayNameFor(model => model.LocationId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Location)
+            @Html.DisplayNameFor(model => model.Location.Name)
         </th>
         <th></th>
     </tr>
@@ -66,7 +66,7 @@
                 @Html.DisplayFor(modelItem => item.LocationId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Location)
+                @Html.DisplayFor(modelItem => item.Location.Name)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.ArmorSetId }) |

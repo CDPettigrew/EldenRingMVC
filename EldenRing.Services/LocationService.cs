@@ -49,7 +49,8 @@ namespace EldenRing.Services
                         Name = entity.Name,
                         Region = entity.Region,
                         Weapons = entity.Weapons,
-                        ArmorSets = entity.ArmorSets
+                        ArmorSets = entity.ArmorSets,
+                        Spells = entity.Spells
                     };
             }
         }
