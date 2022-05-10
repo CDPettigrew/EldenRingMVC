@@ -18,62 +18,29 @@
         @TempData["SaveResult"]
     </div>
 }
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ArmorSetId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TypeOfArmor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Pieces)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PhysicalProtection)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LocationId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Location.Name)
-        </th>
-        <th></th>
-    </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ArmorSetId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TypeOfArmor)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pieces)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PhysicalProtection)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LocationId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Location.Name)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ArmorSetId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ArmorSetId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ArmorSetId })
-            </td>
-        </tr>
-    }
+<div class="container">
 
-</table>
+    <div class="rows">
+
+        @foreach (var item in Model)
+        {
+            <div class="card col-md-5 " style="border: solid 3px #F5F2E7; border-radius: 5px; margin: 2rem; ">
+                <div class="card-body">
+                    <h3 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h3>
+                    <h4 class="car-subtitle">Weapon Id: @Html.DisplayFor(modelItem => item.ArmorSetId)</h4>
+                    <h4 class="car-subtitle">Weapon Type: @Html.DisplayFor(modelItem => item.TypeOfArmor)</h4>
+                    <h4 class="car-subtitle">Damage Negation: @Html.DisplayFor(modelItem => item.PhysicalProtection)</h4>
+                    <h4 class="car-subtitle">Location Id: @Html.DisplayFor(modelItem => item.LocationId)</h4>
+                    <h4 class="car-subtitle">Location: @Html.DisplayFor(modelItem => item.Location.Name)</h4>
+                    <div class="btn-group" role="group">
+                        <button class="card-link btn btn-default">@Html.ActionLink("Edit", "Edit", new { id = item.ArmorSetId })</button>
+                        <button class="card-link btn btn-default">@Html.ActionLink("Details", "Details", new { id = item.ArmorSetId })</button>
+                        <button class="card-link btn btn-default">@Html.ActionLink("Delete", "Delete", new { id = item.ArmorSetId })</button>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>

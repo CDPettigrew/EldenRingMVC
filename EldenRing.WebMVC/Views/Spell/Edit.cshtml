@@ -14,25 +14,25 @@
         <h4>SpellEdit</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
+        <div class="row mb-3" style="margin: 1rem 0rem 1rem 0rem">
             @Html.LabelFor(model => model.SpellId, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-offset-2">
                 @Html.EditorFor(model => model.SpellId, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.SpellId, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="row mb-3" style="margin: 1rem 0rem 1rem 0rem">
             @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-offset-2">
                 @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="row mb-3" style="margin: 1rem 0rem 1rem 0rem">
             @Html.LabelFor(model => model.Incantation, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-offset-2">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.Incantation)
                     @Html.ValidationMessageFor(model => model.Incantation, "", new { @class = "text-danger" })
@@ -40,9 +40,9 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="row mb-3" style="margin: 1rem 0rem 1rem 0rem">
             @Html.LabelFor(model => model.Scorcery, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-offset-2">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.Scorcery)
                     @Html.ValidationMessageFor(model => model.Scorcery, "", new { @class = "text-danger" })
@@ -50,60 +50,57 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="row mb-3" style="margin: 1rem 0rem 1rem 0rem">
             @Html.LabelFor(model => model.FocusPoints, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-offset-2">
                 @Html.EditorFor(model => model.FocusPoints, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.FocusPoints, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="row mb-3" style="margin: 1rem 0rem 1rem 0rem">
             @Html.LabelFor(model => model.SlotUsage, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-offset-2">
                 @Html.EditorFor(model => model.SlotUsage, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.SlotUsage, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="row mb-3" style="margin: 1rem 0rem 1rem 0rem">
             @Html.LabelFor(model => model.IntelligenceScaling, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-offset-2">
                 @Html.EditorFor(model => model.IntelligenceScaling, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.IntelligenceScaling, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="row mb-3" style="margin: 1rem 0rem 1rem 0rem">
             @Html.LabelFor(model => model.FaithScaling, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-offset-2">
                 @Html.EditorFor(model => model.FaithScaling, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.FaithScaling, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="row mb-3" style="margin: 1rem 0rem 1rem 0rem">
             @Html.LabelFor(model => model.ArcaneScaling, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-offset-2">
                 @Html.EditorFor(model => model.ArcaneScaling, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ArcaneScaling, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="row mb-3" style="margin: 1rem 0rem 1rem 0rem">
             @Html.LabelFor(model => model.LocationId, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-offset-2">
                 @Html.EditorFor(model => model.LocationId, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LocationId, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="col-md-offset-1 col-md-10">
-            <input type="submit" value="Edit" class="btn btn-default" />
+        <div class="btn-group" role="group">
+            <button type="submit" value="Edit" class="btn btn-default">Edit</button>
+            <button class="btn btn-default">@Html.ActionLink("Back to List", "Index")</button> 
         </div>
     </div>
 }
-
-<div class="createbtn">
-    @Html.ActionLink("Back to List", "Index")
-</div>
