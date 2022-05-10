@@ -18,38 +18,25 @@
         @TempData["SaveResult"]
     </div>
 }
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.LocationId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Region)
-        </th>
-        <th></th>
-    </tr>
+<div class="container">
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.LocationId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Region)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.LocationId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.LocationId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.LocationId })
-            </td>
-        </tr>
-    }
+    <div class="rows">
 
-</table>
+        @foreach (var item in Model)
+        {
+            <div class="card col-md-5 " style="border: solid 3px #F5F2E7; border-radius: 5px; margin: 2rem; ">
+                <div class="card-body">
+                    <h3 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h3>
+                    <h4 class="car-subtitle">@Html.DisplayFor(modelItem => item.LocationId)</h4>
+                    <h4 class="car-subtitle">@Html.DisplayFor(modelItem => item.Region)</h4>
+                    <div class="btn-group" role="group">
+                        <button class="card-link btn btn-default">@Html.ActionLink("Edit", "Edit", new { id = item.LocationId })</button>
+                        <button class="card-link btn btn-default">@Html.ActionLink("Details", "Details", new { id = item.LocationId })</button>
+                        <button class="card-link btn btn-default">@Html.ActionLink("Delete", "Delete", new { id = item.LocationId })</button> 
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>

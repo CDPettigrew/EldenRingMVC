@@ -98,7 +98,7 @@
 
     </dl>
 </div>
-<p class="createbtn">
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ArmorSetId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<div class="btn-group" role="group">
+    <button class="btn btn-default">@Html.ActionLink("Edit", "Edit", new { id = Model.ArmorSetId })</button> 
+    <button class="btn btn-default">@Html.ActionLink("Back to List", "Index")</button> 
+</div>
