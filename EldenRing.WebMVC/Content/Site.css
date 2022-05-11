@@ -155,11 +155,7 @@ a:hover, a:visited, a:link, a:active{
     color: #F5F2E7;
 }
 
-.form-control {
-    color: #395B64;
-}
-
-#TypyOfWeapon {
+select {
     color: #395B64;
 }
 
