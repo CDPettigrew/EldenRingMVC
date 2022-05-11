@@ -27,5 +27,6 @@ namespace EldenRing.Models.ArmorSetModels
         [Display(Name = "Holy Protection")]
         public double HolyProtection { get; set; }
         public int LocationId { get; set; }
+        public byte[] Image { get; set; }
     }
 }

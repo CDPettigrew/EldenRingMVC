@@ -35,5 +35,6 @@ namespace EldenRing.Models.ArmorSetModels
         public double HolyProtection { get; set; }
         [Required]
         public int LocationId { get; set; }
+        public byte[] Image { get; set; }
     }
 }

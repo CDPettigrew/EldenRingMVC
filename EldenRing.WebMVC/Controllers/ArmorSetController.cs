@@ -52,8 +52,9 @@ namespace EldenRing.WebMVC.Controllers
                 ModelState.AddModelError("", "Id Mismatched");
                 return View(model);
             }
+            HttpPostedFileBase file = Request.Files["ImageData"];
             var service = CreateArmorSetService();
-            if (service.UpdateArmorSet(model))
+            if (service.UpdateArmorSet(file, model))
             {
                 TempData["SaveResult"] = "Your ArmorSet was updated";
                 return RedirectToAction("Index");
@@ -106,14 +107,43 @@ namespace EldenRing.WebMVC.Controllers
             {
                 return View(model);
             }
+            HttpPostedFileBase file = Request.Files["ImageData"];
             var service = CreateArmorSetService();
-            if (service.CreatArmorSet(model))
+            if (service.CreatArmorSet(file, model))
             {
                 TempData["SaveResult"] = "Your ArmorSet was created.";
                 return RedirectToAction("Index");
             }
             ModelState.AddModelError("", "ArmorSet could not be created.");
             return View(model);
+        }
+        public ActionResult RetrieveImageAlt(int id)
+        {
+            var service = CreateArmorSetService();
+
+            var armor = service.GetArmorSetId(id);
+            if (armor.Image != null)
+            {
+                return File(armor.Image, "image/jpg");
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public ActionResult RetrieveImage(int id)
+        {
+            var service = CreateArmorSetService();
+            byte[] cover = service.GetImageFromDataBaseA(id);
+
+            if (cover != null)
+            {
+                return File(cover, "image/jpg");
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

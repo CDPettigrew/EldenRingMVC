@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using EldenRing.Data;
 using EldenRing.Models.ArmorSetModels;
 using EldenRing.WebMVC.Models;
@@ -11,8 +13,25 @@ namespace EldenRing.Services
 {
     public class ArmorSetService
     {
-        public bool CreatArmorSet(ArmorSetCreate model)
+        public byte[] GetImageFromDataBaseA(int id)
         {
+            using (ApplicationDbContext ctx = new ApplicationDbContext())
+            {
+                var q = from temp in ctx.ArmorSets where temp.ArmorSetId == id select temp.Image;
+                byte[] cover = q.First();
+                return cover;
+            }
+        }
+        public byte[] ConvertToBytesA(HttpPostedFileBase image)
+        {
+            byte[] imageBytes = null;
+            BinaryReader reader = new BinaryReader(image.InputStream);
+            imageBytes = reader.ReadBytes((int)image.ContentLength);
+            return imageBytes;
+        }
+        public bool CreatArmorSet(HttpPostedFileBase file, ArmorSetCreate model)
+        {
+            model.Image = ConvertToBytesA(file);
             var entity = new ArmorSet()
             {
                 Name = model.Name,
@@ -23,9 +42,10 @@ namespace EldenRing.Services
                 FireProtection = model.FireProtection,
                 LightProtection = model.LightProtection,
                 HolyProtection = model.HolyProtection,
-                LocationId = model.LocationId
+                LocationId = model.LocationId,
+                Image = model.Image
             };
-            using(var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 ctx.ArmorSets.Add(entity);
                 return ctx.SaveChanges() == 1;
@@ -43,14 +63,15 @@ namespace EldenRing.Services
                     Pieces = w.Pieces,
                     PhysicalProtection = w.PhysicalProtection,
                     LocationId = (int)w.LocationId,
-                    Location = w.Location
+                    Location = w.Location,
+                    Image = w.Image
                 });
                 return query.ToArray();
             }
         }
         public ArmorSetDetail GetArmorSetId(int armorSetId)
         {
-            using(var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx.ArmorSets.Single(w => w.ArmorSetId == armorSetId);
                 return
@@ -66,13 +87,14 @@ namespace EldenRing.Services
                         LightProtection = entity.LightProtection,
                         HolyProtection = entity.HolyProtection,
                         LocationId = (int)entity.LocationId,
-                        Location = entity.Location
+                        Location = entity.Location,
+                        Image = entity.Image
                     };
             }
         }
         public IEnumerable<ArmorSetListItem> GetArmorSetByType(ArmorType enumNum)
         {
-            using(var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 var query = ctx.ArmorSets.Where(w => w.TypeOfArmor == enumNum).Select(a => new ArmorSetListItem
                 {
@@ -86,10 +108,11 @@ namespace EldenRing.Services
                 return query.ToArray();
             }
         }
-        public bool UpdateArmorSet(ArmorSetEdit model)
+        public bool UpdateArmorSet(HttpPostedFileBase file, ArmorSetEdit model)
         {
-            using(var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
+                model.Image = ConvertToBytesA(file);
                 var entity = ctx.ArmorSets.Single(a => a.ArmorSetId == model.ArmorSetId);
                 entity.Name = model.Name;
                 entity.TypeOfArmor = model.TypeOfArmor;
@@ -100,6 +123,7 @@ namespace EldenRing.Services
                 entity.LightProtection = model.LightProtection;
                 entity.HolyProtection = model.HolyProtection;
                 entity.LocationId = model.LocationId;
+                entity.Image = model.Image;
                 return ctx.SaveChanges() == 1;
             }
         }

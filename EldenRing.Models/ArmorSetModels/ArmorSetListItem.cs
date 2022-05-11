@@ -20,5 +20,6 @@ namespace EldenRing.Models.ArmorSetModels
         public double PhysicalProtection { get; set; }
         public int LocationId { get; set; }
         public virtual Location Location { get; set; }
+        public byte[] Image { get; set; }
     }
 }

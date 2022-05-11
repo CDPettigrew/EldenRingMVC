@@ -33,6 +33,7 @@
                     <h4 class="car-subtitle">Damage: @Html.DisplayFor(modelItem => item.PhysicalDamage)</h4>
                     <h4 class="car-subtitle">Location Id: @Html.DisplayFor(modelItem => item.LocationId)</h4>
                     <h4 class="car-subtitle">Location: @Html.DisplayFor(modelItem => item.Location.Name)</h4>
+                    <img src="/Weapon/RetrieveImage/@item.WeaponId" alt="" height="150" width="150" />
                     <div class="btn-group" role="group">
                         <button class="card-link btn btn-default">@Html.ActionLink("Edit", "Edit", new { id = item.WeaponId })</button>
                         <button class="card-link btn btn-default">@Html.ActionLink("Details", "Details", new { id = item.WeaponId })</button>

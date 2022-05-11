@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 using EldenRing.Data;
 
 namespace EldenRing.Models.WeaponModels
@@ -20,5 +21,6 @@ namespace EldenRing.Models.WeaponModels
         public int LocationId { get; set; }
         public virtual Location Location { get; set; }
         public int SpellId { get; set; }
+        public byte[] Image { get; set; }
     }
 }
