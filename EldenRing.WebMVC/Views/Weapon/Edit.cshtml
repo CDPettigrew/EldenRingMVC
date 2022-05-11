@@ -7,7 +7,7 @@
 <h2>Edit</h2>
 
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Edit", "Weapon", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
@@ -192,6 +192,14 @@
             <div class="col-md-offset-1">
                 @Html.EditorFor(model => model.SpellId, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.SpellId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row mb-3" style="margin: 1rem 0rem 1rem 0rem">
+            @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-offset-1">
+                <input type="file" name="ImageData" id="ImageData" onchange="fileCheck(this);" />
+                @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
             </div>
         </div>
 

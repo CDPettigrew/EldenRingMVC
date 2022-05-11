@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace EldenRing.Data
 {
@@ -85,6 +86,7 @@ namespace EldenRing.Data
         public bool Sleep { get; set; }
         [Required]
         public bool Madness { get; set; }
+        public byte[] Image { get; set; }
         public int? LocationId { get; set; }
         [ForeignKey(nameof(LocationId))]
         public virtual Location Location { get; set; }

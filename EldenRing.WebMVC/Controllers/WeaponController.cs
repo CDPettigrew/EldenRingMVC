@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using EldenRing.Data;
 using EldenRing.Models.WeaponModels;
 using EldenRing.Services;
+using EldenRing.WebMVC.Models;
 
 namespace EldenRing.WebMVC.Controllers
 {
@@ -62,8 +66,9 @@ namespace EldenRing.WebMVC.Controllers
                 ModelState.AddModelError("", "Id Mismatched");
                 return View(model);
             }
+            HttpPostedFileBase file = Request.Files["ImageData"];
             var service = CreateWeaponService();
-            if (service.UpdateWeapon(model))
+            if (service.UpdateWeapon(file,model))
             {
                 TempData["SaveResult"] = "Your Weapon was updated.";
                 return RedirectToAction("Index");
@@ -116,14 +121,43 @@ namespace EldenRing.WebMVC.Controllers
             {
                 return View(model);
             }
+            HttpPostedFileBase file = Request.Files["ImageData"];
             var service = CreateWeaponService();
-            if (service.CreateWeapon(model))
+            if (service.CreateWeapon(file, model))
             {
                 TempData["SaveResult"] = "Your weapon was created.";
                 return RedirectToAction("Index");
             }
             ModelState.AddModelError("", "Weapon could not be created");
             return View(model);
+        }
+        public ActionResult RetrieveImageAlt(int id)
+        {
+            var service = CreateWeaponService();
+
+            var weapon = service.GetWeaponById(id);
+            if (weapon.Image != null)
+            {
+                return File(weapon.Image, "image/jpg");
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public ActionResult RetrieveImage(int id)
+        {
+            var service = CreateWeaponService();
+            byte[] cover = service.GetImageFromDataBase(id);
+
+            if (cover != null)
+            {
+                return File(cover, "image/jpg");
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

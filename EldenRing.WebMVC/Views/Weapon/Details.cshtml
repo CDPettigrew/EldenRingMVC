@@ -177,10 +177,15 @@
         <dd>
             @Html.DisplayFor(model => model.SpellId)
         </dd>
-
     </dl>
+    <dl>
+        <dt style="margin: 1rem">
+            <img src="/Weapon/RetrieveImage/@Model.WeaponId" alt="" height="150" width="150" />
+        </dt>
+    </dl>
+
 </div>
 <div class="btn-group" role="group">
-    <button class="btn btn-default">@Html.ActionLink("Edit", "Edit", new { id = Model.WeaponId })</button> 
-    <button class="btn btn-default">@Html.ActionLink("Back to List", "Index")</button> 
+    <button class="btn btn-default">@Html.ActionLink("Edit", "Edit", new { id = Model.WeaponId })</button>
+    <button class="btn btn-default">@Html.ActionLink("Back to List", "Index")</button>
 </div>
