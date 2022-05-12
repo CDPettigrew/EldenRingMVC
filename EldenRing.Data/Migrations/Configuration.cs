@@ -196,7 +196,32 @@
             new Location() { LocationId = 179, Name = "Shack of The Lofty", Region = "Mountaintops of The Giants" },
             new Location() { LocationId = 180, Name = "SpiritCaller's Cave", Region = "Mountaintops of The Giants" },
             new Location() { LocationId = 181, Name = "StarGazer's Ruins", Region = "Mountaintops of The Giants" },
-            new Location() { LocationId = 182, Name = "Zamor Ruins", Region = "Mountaintops of The Giants" }
+            new Location() { LocationId = 182, Name = "Zamor Ruins", Region = "Mountaintops of The Giants" },
+            new Location() { LocationId = 183, Name = "Roundtable hold", Region = "N/A" }
+            );
+            context.Spells.AddOrUpdate(s => s.SpellId, new Spell() { SpellId = 1, Name = "Black Blade", TypeOfSpell = SpellType.Magic, Incantation = true, Scorcery = false, FocusPoints = 26, SlotUsage = 2, IntelligenceScaling = 0, FaithScaling = 46, ArcaneScaling = 0, LocationId = 183},
+            new Spell() { SpellId = 2, Name = "Bloodboon", TypeOfSpell = SpellType.Fire, Incantation = true, Scorcery = false, FocusPoints = 15, SlotUsage = 1, IntelligenceScaling = 0, FaithScaling = 14, ArcaneScaling = 17, LocationId = 183},
+            new Spell() { SpellId = 3, Name = "Burn O Flame", TypeOfSpell = SpellType.Fire, Incantation = true, Scorcery = false, FocusPoints = 30, SlotUsage = 1, IntelligenceScaling = 0, FaithScaling = 27, ArcaneScaling = 0, LocationId = 183},
+            new Spell() { SpellId = 4, Name = "Carian Retaliation", TypeOfSpell = SpellType.Fire, Incantation = false, Scorcery = true, FocusPoints = 8, SlotUsage = 1, IntelligenceScaling = 0, FaithScaling = 17, ArcaneScaling = 0, LocationId = 92},
+            new Spell() { SpellId = 5, Name = "Comet Azur", TypeOfSpell = SpellType.Magic, Incantation = false, Scorcery = true, FocusPoints = 40, SlotUsage = 3, IntelligenceScaling = 60, FaithScaling = 0, ArcaneScaling = 0, LocationId = 144},
+            new Spell() { SpellId = 6, Name = "Death Lightning", TypeOfSpell = SpellType.Blight, Incantation = true, Scorcery = false, FocusPoints = 46, SlotUsage = 2, IntelligenceScaling = 0, FaithScaling = 47, ArcaneScaling = 0, LocationId = 183},
+            new Spell() { SpellId = 7, Name = "Elden Stars", TypeOfSpell = SpellType.Magic, Incantation = true, Scorcery = false, FocusPoints = 47, SlotUsage = 2, IntelligenceScaling = 0, FaithScaling = 50, ArcaneScaling = 0, LocationId = 162},
+            new Spell() { SpellId = 8, Name = "Eternal Darkness", TypeOfSpell = SpellType.Debuff, Incantation = false, Scorcery = true, FocusPoints = 25, SlotUsage = 1, IntelligenceScaling = 35, FaithScaling = 0, ArcaneScaling = 0, LocationId = 183},
+            new Spell() { SpellId = 9, Name = "Flame Fortification", TypeOfSpell = SpellType.Buff, Incantation = true, Scorcery = false, FocusPoints = 20, SlotUsage = 1, IntelligenceScaling = 0, FaithScaling = 10, ArcaneScaling = 0, LocationId = 183},
+            new Spell() { SpellId = 10, Name = "Fortissax's Lightning Spear", TypeOfSpell = SpellType.Lightning, Incantation = true, Scorcery = false, FocusPoints = 64, SlotUsage = 1, IntelligenceScaling = 0, FaithScaling = 46, ArcaneScaling = 0, LocationId = 183},
+            new Spell() { SpellId = 11, Name = "Golden Vow", TypeOfSpell = SpellType.Buff, Incantation = true, Scorcery = false, FocusPoints = 47, SlotUsage = 1, IntelligenceScaling = 0, FaithScaling = 25, ArcaneScaling = 0, LocationId = 140},
+            new Spell() { SpellId = 12, Name = "Placidusax's Ruin", TypeOfSpell = SpellType.Magic, Incantation = true, Scorcery = false, FocusPoints = 62, SlotUsage = 1, IntelligenceScaling = 0, FaithScaling = 36, ArcaneScaling = 0, LocationId = 183},
+            new Spell() { SpellId = 13, Name = "Protection of the ErdTree", TypeOfSpell = SpellType.Buff, Incantation = true, Scorcery = false, FocusPoints = 30, SlotUsage = 1, IntelligenceScaling = 0, FaithScaling = 35, ArcaneScaling = 0, LocationId = 119},
+            new Spell() { SpellId = 14, Name = "Ranni's Dark Moon", TypeOfSpell = SpellType.Debuff, Incantation = false, Scorcery = true, FocusPoints = 62, SlotUsage = 2, IntelligenceScaling = 68, FaithScaling = 0, ArcaneScaling = 0, LocationId = 63},
+            new Spell() { SpellId = 14, Name = "Rennala's Full Moon", TypeOfSpell = SpellType.Debuff, Incantation = false, Scorcery = true, FocusPoints = 5, SlotUsage = 2, IntelligenceScaling = 70, FaithScaling = 0, ArcaneScaling = 0, LocationId = 183},
+            new Spell() { SpellId = 15, Name = "Rykard's Rancor", TypeOfSpell = SpellType.Magic, Incantation = false, Scorcery = true, FocusPoints = 35, SlotUsage = 1, IntelligenceScaling = 40, FaithScaling = 18, ArcaneScaling = 0, LocationId = 183},
+            new Spell() { SpellId = 16, Name = "Scarlet Aeonia", TypeOfSpell = SpellType.ScarletRot, Incantation = true, Scorcery = false, FocusPoints = 56, SlotUsage = 3, IntelligenceScaling = 0, FaithScaling = 35, ArcaneScaling = 0, LocationId = 183},
+            new Spell() { SpellId = 17, Name = "The Flame of Frenzy", TypeOfSpell = SpellType.Fire, Incantation = true, Scorcery = false, FocusPoints = 16, SlotUsage = 1, IntelligenceScaling = 0, FaithScaling = 14, ArcaneScaling = 17, LocationId = 183},
+            new Spell() { SpellId = 18, Name = "Agheel's Flame", TypeOfSpell = SpellType.Fire, Incantation = true, Scorcery = false, FocusPoints = 15, SlotUsage = 1, IntelligenceScaling = 0, FaithScaling = 16, ArcaneScaling = 0, LocationId = 34},
+            new Spell() { SpellId = 19, Name = "Ambush Shard", TypeOfSpell = SpellType.Magic, Incantation = false, Scorcery = true, FocusPoints = 16, SlotUsage = 1, IntelligenceScaling = 23, FaithScaling = 0, ArcaneScaling = 0, LocationId = 51},
+            new Spell() { SpellId = 20, Name = "Assassin's Approach", TypeOfSpell = SpellType.Buff, Incantation = true, Scorcery = false, FocusPoints = 15, SlotUsage = 1, IntelligenceScaling = 0, FaithScaling = 10, ArcaneScaling = 0, LocationId = 183},
+            new Spell() { SpellId = 21, Name = "Divine Fortification", TypeOfSpell = SpellType.Buff, Incantation = true, Scorcery = false, FocusPoints = 20, SlotUsage = 1, IntelligenceScaling = 0, FaithScaling = 10, ArcaneScaling = 0, LocationId = 48},
+            new Spell() { SpellId = 22, Name = "Dragon Fire", TypeOfSpell = SpellType.Fire, Incantation = true, Scorcery = false, FocusPoints = 28, SlotUsage = 1, IntelligenceScaling = 0, FaithScaling = 15, ArcaneScaling = 12, LocationId = 2}
             );
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
