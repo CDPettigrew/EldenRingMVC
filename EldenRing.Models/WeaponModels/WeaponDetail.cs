@@ -45,6 +45,7 @@ namespace EldenRing.Models.WeaponModels
         public int LocationId { get; set; }
         public virtual Location Location { get; set; }
         public int SpellId { get; set; }
+        public virtual Spell Spell { get; set; }
         public byte[] Image { get; set; }
     }
 }

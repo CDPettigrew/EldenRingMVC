@@ -90,7 +90,6 @@ namespace EldenRing.Services
                         FaithScaling = entity.FaithScaling,
                         ArcaneScaling = entity.ArcaneScaling,
                         LocationId = (int)entity.LocationId,
-                        Weapons = entity.Weapons,
                         Location = entity.Location,
                         Image = entity.Image
                     };

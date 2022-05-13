@@ -110,6 +110,7 @@ namespace EldenRing.Services
                         LocationId = (int)entity.LocationId,
                         Location = entity.Location,
                         SpellId = (int)entity.SpellId,
+                        Spell = entity.Spell,
                         Image = entity.Image
                     };
             }

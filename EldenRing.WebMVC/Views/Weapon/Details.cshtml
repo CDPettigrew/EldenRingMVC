@@ -183,6 +183,18 @@
             <img src="/Weapon/RetrieveImage/@Model.WeaponId" alt="" height="150" width="150" />
         </dt>
     </dl>
+    <div class="rows">
+
+            <div class="card col-md-5 " style="border: solid 3px #F5F2E7; border-radius: 5px; margin: 2rem; ">
+                <div class="card-body">
+                    <h2>Popular Spell used with this Weapon</h2>
+                    <h4 class="card-title">Spell Name: @Html.DisplayFor(model => model.Spell.Name)</h4>
+                    <h4 class="car-subtitle">Spell Id: @Html.DisplayFor(model => model.Spell.SpellId)</h4>
+                    <h4 class="car-subtitle">Spell Type: @Html.DisplayFor(model => model.Spell.TypeOfSpell)</h4>
+                </div>
+            </div>
+
+    </div>
 
 </div>
 <div class="btn-group" role="group">

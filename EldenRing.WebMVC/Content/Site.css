@@ -22,6 +22,10 @@ textarea {
     max-width: 280px;
 }
 
+nav {
+    background-image: linear-gradient(to right, #222, #395B64);
+}
+
 .container {
     width: 85%;
     align-content: center;

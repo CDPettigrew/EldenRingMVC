@@ -83,39 +83,9 @@
         </dd>
 
     </dl>
-    <dl>
         <dt style="margin: 1rem">
             <img src="/Spell/RetrieveImage/@Model.SpellId" alt="" height="150" width="150" />
         </dt>
-    </dl>
-
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Weapons)
-            </th>
-            <th></th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model.Weapons)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-
-                <td>
-                    @Html.DisplayFor(modelItem => item.WeaponId)
-                </td>
-
-                <td>
-                    @Html.DisplayFor(modelItem => item.TypeOfWeapon)
-                </td>
-            </tr>
-        }
-    </table>
-
 </div>
 <div class="btn-group" role="group">
     <button class="btn btn-default">@Html.ActionLink("Edit", "Edit", new { id = Model.SpellId })</button>

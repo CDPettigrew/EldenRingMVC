@@ -27,8 +27,8 @@
             <div class="card col-md-5 " style="border: solid 3px #F5F2E7; border-radius: 5px; margin: 2rem; ">
                 <div class="card-body">
                     <h3 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h3>
-                    <h4 class="car-subtitle">@Html.DisplayFor(modelItem => item.LocationId)</h4>
-                    <h4 class="car-subtitle">@Html.DisplayFor(modelItem => item.Region)</h4>
+                    <h4 class="car-subtitle">Location Id: @Html.DisplayFor(modelItem => item.LocationId)</h4>
+                    <h4 class="car-subtitle">Location: @Html.DisplayFor(modelItem => item.Region)</h4>
                     <div class="btn-group" role="group">
                         <button class="card-link btn btn-default">@Html.ActionLink("Edit", "Edit", new { id = item.LocationId })</button>
                         <button class="card-link btn btn-default">@Html.ActionLink("Details", "Details", new { id = item.LocationId })</button>

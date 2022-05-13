@@ -31,7 +31,7 @@ namespace EldenRing.Data
         public double FaithScaling { get; set; }
         [Required]
         public double ArcaneScaling { get; set; }
-        public virtual List<Weapon> Weapons { get; set; }
+        //public virtual Weapon Weapon { get; set; }
         public int? LocationId { get; set; }
         [ForeignKey(nameof(LocationId))]
         public virtual Location Location { get; set; }

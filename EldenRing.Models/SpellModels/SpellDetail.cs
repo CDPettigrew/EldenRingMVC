@@ -21,7 +21,7 @@ namespace EldenRing.Models.SpellModels
         public double IntelligenceScaling { get; set; }
         public double FaithScaling { get; set; }
         public double ArcaneScaling { get; set; }
-        public virtual List<Weapon> Weapons { get; set; }
+        public virtual Weapon Weapon { get; set; }
         public int LocationId { get; set; }
         public virtual Location Location { get; set; }
         public byte[] Image { get; set; }
