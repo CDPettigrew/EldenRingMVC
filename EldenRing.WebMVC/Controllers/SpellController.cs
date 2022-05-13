@@ -53,8 +53,9 @@ namespace EldenRing.WebMVC.Controllers
                 ModelState.AddModelError("", "Id Mismatched");
                 return View(model);
             }
+            HttpPostedFileBase file = Request.Files["ImageData"];
             var service = CreateSpellService();
-            if (service.UpdateSpell(model))
+            if (service.UpdateSpell(file, model))
             {
                 TempData["SaveResult"] = "Your Spell was updated";
                 return RedirectToAction("Index");
@@ -107,14 +108,43 @@ namespace EldenRing.WebMVC.Controllers
             {
                 return View(model);
             }
+            HttpPostedFileBase file = Request.Files["ImageData"];
             var service = CreateSpellService();
-            if (service.CreatSpells(model))
+            if (service.CreatSpells(file, model))
             {
                 TempData["SaveResult"] = "Your Spell was created.";
                 return RedirectToAction("Index");
             }
             ModelState.AddModelError("", "Spell could not be created.");
             return View(model);
+        }
+        public ActionResult RetrieveImageAlt(int id)
+        {
+            var service = CreateSpellService();
+
+            var spell = service.GetSpellId(id);
+            if (spell.Image != null)
+            {
+                return File(spell.Image, "image/jpg");
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public ActionResult RetrieveImage(int id)
+        {
+            var service = CreateSpellService();
+            byte[] cover = service.GetImageFromDataBase(id);
+
+            if (cover != null)
+            {
+                return File(cover, "image/jpg");
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

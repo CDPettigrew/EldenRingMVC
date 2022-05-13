@@ -16,5 +16,6 @@ namespace EldenRing.Models.SpellModels
         public bool Scorcery { get; set; }
         public int LocationId { get; set; }
         public virtual Location Location { get; set; }
+        public byte[] Image { get; set; }
     }
 }

@@ -52,7 +52,8 @@
                         FaithScaling = c.Double(nullable: false),
                         ArcaneScaling = c.Double(nullable: false),
                         LocationId = c.Int(),
-                    })
+                        Image = c.Binary(),
+                })
                 .PrimaryKey(t => t.SpellId)
                 .ForeignKey("dbo.Location", t => t.LocationId)
                 .Index(t => t.LocationId);

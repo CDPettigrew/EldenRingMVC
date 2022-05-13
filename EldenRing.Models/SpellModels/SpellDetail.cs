@@ -24,5 +24,6 @@ namespace EldenRing.Models.SpellModels
         public virtual List<Weapon> Weapons { get; set; }
         public int LocationId { get; set; }
         public virtual Location Location { get; set; }
+        public byte[] Image { get; set; }
     }
 }

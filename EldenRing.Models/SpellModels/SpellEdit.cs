@@ -21,5 +21,6 @@ namespace EldenRing.Models.SpellModels
         public double ArcaneScaling { get; set; }
         public virtual List<Weapon> Weapons { get; set; } = new List<Weapon>();
         public int LocationId { get; set; }
+        public byte[] Image { get; set; }
     }
 }

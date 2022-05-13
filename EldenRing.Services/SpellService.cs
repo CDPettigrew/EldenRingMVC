@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using EldenRing.Data;
 using EldenRing.Models.SpellModels;
 using EldenRing.WebMVC.Models;
@@ -11,8 +13,25 @@ namespace EldenRing.Services
 {
     public class SpellService
     {
-        public bool CreatSpells(SpellCreate model)
+        public byte[] GetImageFromDataBase(int id)
         {
+            using (ApplicationDbContext ctx = new ApplicationDbContext())
+            {
+                var q = from temp in ctx.Spells where temp.SpellId == id select temp.Image;
+                byte[] cover = q.First();
+                return cover;
+            }
+        }
+        public byte[] ConvertToBytes(HttpPostedFileBase image)
+        {
+            byte[] imageBytes = null;
+            BinaryReader reader = new BinaryReader(image.InputStream);
+            imageBytes = reader.ReadBytes((int)image.ContentLength);
+            return imageBytes;
+        }
+        public bool CreatSpells(HttpPostedFileBase file, SpellCreate model)
+        {
+            model.Image = ConvertToBytes(file);
             var entity = new Spell()
             {
                 Name = model.Name,
@@ -24,7 +43,8 @@ namespace EldenRing.Services
                 IntelligenceScaling = model.IntelligenceScaling,
                 FaithScaling = model.FaithScaling,
                 ArcaneScaling = model.ArcaneScaling,
-                LocationId = model.LocationId
+                LocationId = model.LocationId,
+                Image = model.Image
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -44,7 +64,9 @@ namespace EldenRing.Services
                     Incantation = w.Incantation,
                     Scorcery = w.Scorcery,
                     LocationId = (int)w.LocationId,
-                    Location = w.Location
+                    Location = w.Location,
+                    Image = w.Image
+                    
                 });
                 return query.ToArray();
             }
@@ -69,14 +91,16 @@ namespace EldenRing.Services
                         ArcaneScaling = entity.ArcaneScaling,
                         LocationId = (int)entity.LocationId,
                         Weapons = entity.Weapons,
-                        Location = entity.Location
+                        Location = entity.Location,
+                        Image = entity.Image
                     };
             }
         }
-        public bool UpdateSpell(SpellEdit model)
+        public bool UpdateSpell(HttpPostedFileBase file, SpellEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
+                model.Image = ConvertToBytes(file);
                 var entity = ctx.Spells.Single(a => a.SpellId == model.SpellId);
                 entity.Name = model.Name;
                 entity.TypeOfSpell = model.TypeOfSpell;
@@ -88,6 +112,7 @@ namespace EldenRing.Services
                 entity.FaithScaling = model.FaithScaling;
                 entity.ArcaneScaling = model.ArcaneScaling;
                 entity.LocationId = model.LocationId;
+                entity.Image = model.Image;
                 return ctx.SaveChanges() == 1;
             }
         }

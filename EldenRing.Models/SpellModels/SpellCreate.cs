@@ -29,5 +29,6 @@ namespace EldenRing.Models.SpellModels
         [Required]
         public double ArcaneScaling { get; set; }
         public int LocationId { get; set; }
+        public byte[] Image { get; set; }
     }
 }
