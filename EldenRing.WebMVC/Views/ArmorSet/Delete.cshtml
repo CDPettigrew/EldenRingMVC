@@ -1,0 +1,106 @@
+﻿@model EldenRing.Models.ArmorSetModels.ArmorSetDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ArmorSetDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ArmorSetId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArmorSetId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeOfArmor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeOfArmor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pieces)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pieces)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhysicalProtection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhysicalProtection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MagicProtection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MagicProtection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FireProtection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FireProtection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LightProtection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LightProtection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HolyProtection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HolyProtection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="btn-group" role="group">
+            <button type="submit" value="Delete" class="btn btn-default">Delete</button> 
+            <button class="btn btn-default">@Html.ActionLink("Back to List", "Index")</button> 
+        </div>
+    }
+
+</div>

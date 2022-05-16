@@ -1,0 +1,141 @@
+﻿@model EldenRing.Models.LocationModels.LocationDetail
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LocationDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Region)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Region)
+        </dd>
+
+    </dl>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Weapons)
+            </th>
+
+            <th>
+                <p>Weapon Id</p>
+            </th>
+
+            <th>
+                <p>Weapon Type</p>
+            </th>
+        </tr>
+
+        @foreach (var item in Model.Weapons)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.WeaponId)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeOfWeapon)
+                </td>
+            </tr>
+        }
+    </table>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ArmorSets)
+            </th>
+
+            <th>
+                <p>Armor Id</p>
+            </th>
+
+            <th>
+                <p>Armor Type</p>
+            </th>
+        </tr>
+
+        @foreach (var item in Model.ArmorSets)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArmorSetId)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeOfArmor)
+                </td>
+            </tr>
+        }
+    </table>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Spells)
+            </th>
+
+            <th>
+                <p>Spell Id</p>
+            </th>
+
+            <th>
+                <p>Spell Type</p>
+            </th>
+        </tr>
+
+        @foreach (var item in Model.Spells)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.SpellId)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeOfSpell)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<div class="btn-group" role="group">
+    <button class="btn btn-default">@Html.ActionLink("Edit", "Edit", new { id = Model.LocationId })</button> 
+    <button class="btn btn-default">@Html.ActionLink("Back to List", "Index")</button> 
+</div>
+

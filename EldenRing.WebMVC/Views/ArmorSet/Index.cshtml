@@ -1,0 +1,47 @@
+﻿@model IEnumerable<EldenRing.Models.ArmorSetModels.ArmorSetListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p class="createbtn">
+    @Html.ActionLink("Create New", "Create")
+</p>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+
+<div class="container">
+
+    <div class="rows">
+
+        @foreach (var item in Model)
+        {
+            <div class="card col-md-5 " style="border: solid 3px #F5F2E7; border-radius: 5px; margin: 2rem; ">
+                <div class="card-body">
+                    <h3 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h3>
+                    <h4 class="car-subtitle">ArmorSet Id: @Html.DisplayFor(modelItem => item.ArmorSetId)</h4>
+                    <h4 class="car-subtitle">ArmorSet Type: @Html.DisplayFor(modelItem => item.TypeOfArmor)</h4>
+                    <h4 class="car-subtitle">Damage Negation: @Html.DisplayFor(modelItem => item.PhysicalProtection)</h4>
+                    <h4 class="car-subtitle">Location Id: @Html.DisplayFor(modelItem => item.LocationId)</h4>
+                    <h4 class="car-subtitle">Location: @Html.DisplayFor(modelItem => item.Location.Name)</h4>
+                    <img src="/ArmorSet/RetrieveImage/@item.ArmorSetId" alt="" height="150" width="100" />
+                    <div class="btn-group" role="group">
+                        <button class="card-link btn btn-default">@Html.ActionLink("Edit", "Edit", new { id = item.ArmorSetId })</button>
+                        <button class="card-link btn btn-default">@Html.ActionLink("Details", "Details", new { id = item.ArmorSetId })</button>
+                        <button class="card-link btn btn-default">@Html.ActionLink("Delete", "Delete", new { id = item.ArmorSetId })</button>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>

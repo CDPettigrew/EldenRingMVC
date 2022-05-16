@@ -1,0 +1,93 @@
+﻿@model EldenRing.Models.SpellModels.SpellDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SpellDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Incantation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Incantation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Scorcery)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Scorcery)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FocusPoints)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FocusPoints)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SlotUsage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SlotUsage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IntelligenceScaling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IntelligenceScaling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FaithScaling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FaithScaling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArcaneScaling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArcaneScaling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationId)
+        </dd>
+
+    </dl>
+        <dt style="margin: 1rem">
+            <img src="/Spell/RetrieveImage/@Model.SpellId" alt="" height="150" width="150" />
+        </dt>
+</div>
+<div class="btn-group" role="group">
+    <button class="btn btn-default">@Html.ActionLink("Edit", "Edit", new { id = Model.SpellId })</button>
+    <button class="btn btn-default">@Html.ActionLink("Back to List", "Index")</button>
+</div>

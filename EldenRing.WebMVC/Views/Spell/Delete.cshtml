@@ -1,0 +1,97 @@
+﻿@model EldenRing.Models.SpellModels.SpellDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SpellDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Incantation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Incantation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Scorcery)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Scorcery)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FocusPoints)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FocusPoints)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SlotUsage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SlotUsage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IntelligenceScaling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IntelligenceScaling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FaithScaling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FaithScaling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArcaneScaling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArcaneScaling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="btn-group" role="group">
+            <button type="submit" value="Delete" class="btn btn-default">Delete</button>
+            <button class="btn btn-default">@Html.ActionLink("Back to List", "Index")</button> 
+        </div>
+    }
+</div>

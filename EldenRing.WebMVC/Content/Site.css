@@ -1,8 +1,7 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿html {
+    height: 100%;
+    font-family: 'Century Gothic';
 }
-
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -22,3 +21,188 @@ select,
 textarea {
     max-width: 280px;
 }
+
+nav {
+    background-image: linear-gradient(to right, #222, #395B64);
+}
+
+.container {
+    width: 85%;
+    align-content: center;
+}
+
+header {
+    display: grid;
+    place-items: center;
+}
+
+body {
+    font-family: 'Century Gothic';
+    font-weight: 600;
+    background-color: #2C3333;
+    color: #F5F2E7;
+    height: 100%;
+}
+
+.jumbotron {
+    background-color: #395B64;
+    color: #F5F2E7;
+    width: auto;
+}
+
+.createbtn {
+    background-color: #395B64;
+    text-align: center;
+    font-weight: 600;
+    color: #F5F2E7;
+    padding: .5rem;
+    margin: .5rem 0 0 5rem;
+    border: 2px solid #F5F2E7;
+    border-radius: 5px;
+    width: 20%;
+}
+
+    .createbtn a {
+        color: #F5F2E7;
+    }
+
+p {
+    font-size: 20px;
+    margin-left: 1rem;
+}
+
+h1 {
+    border-bottom: 3px solid #c3b590;
+    color: #996600;
+}
+
+h2 {
+    margin-left: 1rem;
+}
+
+h4 {
+    color: #F5F2E7;
+    font-weight: 700;
+}
+
+.col-md-10 {
+    padding-right: 1px;
+    padding-left: 47px;
+}
+
+@media (min-width: 992px) {
+
+    .col-md-2 {
+        width: min-content;
+    }
+}
+
+
+.extra {
+    margin-bottom: 3.75rem;
+}
+
+.dl-horizontal {
+    background-color: #395B64;
+    color: #F5F2E7;
+    font-size: 20px;
+    padding: 1rem;
+    margin: 1rem;
+    border: 2px solid #F5F2E7;
+    border-radius: 7px;
+    width: 45%;
+}
+
+/*.row {
+    display: flex;
+    flex-direction: row;
+    margin-right: -15px;
+    margin-left: -15px;
+}*/
+
+.guide {
+    background-color: #395B64;
+    text-align: center;
+    color: #F5F2E7;
+    padding: 1rem;
+    margin: 1rem;
+    border: 2px solid #F5F2E7;
+    border-radius: 5px;
+}
+
+.btn {
+    text-align: center;
+    background-color: #395B64;
+    color: #F5F2E7;
+    font-size: 20px;
+    font-weight: 600;
+    padding: .5rem 2rem;
+    margin: .5rem;
+    margin-right: .5rem;
+    border: 2px solid #395B64;
+    border-radius: 5px;
+}
+
+a {
+    color: #F5F2E7;
+}
+
+a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: auto;
+    height: 50px;
+    color: #F5F2E7;
+}
+
+select {
+    color: #395B64;
+}
+
+.form-group {
+    background-color: #395B64;
+    color: #395B64;
+    width: 20%;
+    border: 2px solid #395B64;
+    border-radius: 5px;
+}
+
+.checkbox {
+    position: relative;
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+/* Data Styles -----------*/
+.table {
+    width: inherit;
+}
+
+    .table th {
+        background-color: #395B64;
+        color: #F5F2E7;
+        font-size: 20px;
+        width: unset;
+    }
+
+    .table td {
+        background-color: #2C3333;
+        color: #F5F2E7;
+        font-size: 16px;
+    }
+
+        .table td a {
+            text-align: center;
+            background-color: #2C3333;
+            color: #F5F2E7;
+            font-size: 12px;
+            border: 2px solid #F5F2E7;
+            border-radius: 5px;
+            padding: .5rem;
+            margin: .5rem;
+            display: inline-block;
+        }

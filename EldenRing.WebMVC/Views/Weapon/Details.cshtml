@@ -1,0 +1,203 @@
+﻿@model EldenRing.Models.WeaponModels.WeaponDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>WeaponDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.WeaponId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeaponId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeOfWeapon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeOfWeapon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StrengthScaling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StrengthScaling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DexterityScaling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DexterityScaling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IntelligenceScaling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IntelligenceScaling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FaithScaling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FaithScaling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArcaneScaling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArcaneScaling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhysicalDamage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhysicalDamage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MagicDamage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MagicDamage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FireDamage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FireDamage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LightDamage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LightDamage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HolyDamage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HolyDamage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bleed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bleed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Poison)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Poison)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FrostBite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FrostBite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScarletRot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScarletRot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sleep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sleep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Madness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Madness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpellId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpellId)
+        </dd>
+    </dl>
+    <dl>
+        <dt style="margin: 1rem">
+            <img src="/Weapon/RetrieveImage/@Model.WeaponId" alt="" height="150" width="150" />
+        </dt>
+    </dl>
+    <div class="rows">
+
+            <div class="card col-md-5 " style="border: solid 3px #F5F2E7; border-radius: 5px; margin: 2rem; ">
+                <div class="card-body">
+                    <h2>Popular Spell used with this Weapon</h2>
+                    <h4 class="card-title">Spell Name: @Html.DisplayFor(model => model.Spell.Name)</h4>
+                    <h4 class="car-subtitle">Spell Id: @Html.DisplayFor(model => model.Spell.SpellId)</h4>
+                    <h4 class="car-subtitle">Spell Type: @Html.DisplayFor(model => model.Spell.TypeOfSpell)</h4>
+                </div>
+            </div>
+
+    </div>
+
+</div>
+<div class="btn-group" role="group">
+    <button class="btn btn-default">@Html.ActionLink("Edit", "Edit", new { id = Model.WeaponId })</button>
+    <button class="btn btn-default">@Html.ActionLink("Back to List", "Index")</button>
+</div>
