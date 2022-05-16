@@ -119,6 +119,11 @@ namespace EldenRing.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
+                var weapons = ctx.Weapons.Where(w => w.SpellId == spellId).ToArray();
+                foreach(Weapon weapon in weapons)
+                {
+                    weapon.SpellId = 54;
+                }
                 var entity = ctx.Spells.Single(w => w.SpellId == spellId);
                 ctx.Spells.Remove(entity);
                 return ctx.SaveChanges() == 1;

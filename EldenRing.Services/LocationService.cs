@@ -68,6 +68,21 @@ namespace EldenRing.Services
         {
             using(var ctx = new ApplicationDbContext())
             {
+                var armorsets = ctx.ArmorSets.Where(w => w.LocationId == locationId).ToArray();
+                foreach (ArmorSet armor in armorsets)
+                {
+                    armor.LocationId = 185;
+                }
+                var spells = ctx.Spells.Where(w => w.LocationId == locationId).ToArray();
+                foreach (Spell spell in spells)
+                {
+                    spell.LocationId = 185;
+                }
+                var weapons = ctx.Weapons.Where(w => w.LocationId == locationId).ToArray();
+                foreach (Weapon weapon in weapons)
+                {
+                    weapon.LocationId = 185;
+                }
                 var entity = ctx.Locations.Single(l => l.LocationId == locationId);
                 ctx.Locations.Remove(entity);
                 return ctx.SaveChanges() == 1;
