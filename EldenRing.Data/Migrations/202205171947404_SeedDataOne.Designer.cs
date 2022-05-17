@@ -7,13 +7,13 @@ namespace EldenRing.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class SeedData2 : IMigrationMetadata
+    public sealed partial class SeedDataOne : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(SeedData2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(SeedDataOne));
         
         string IMigrationMetadata.Id
         {
-            get { return "202205131916182_SeedData2"; }
+            get { return "202205171947404_SeedDataOne"; }
         }
         
         string IMigrationMetadata.Source
