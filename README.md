@@ -29,3 +29,7 @@ to find those items and there locations
 with ease. It could also be reconfigured to follow a players progress and track 
 the location they've been to and the items they've found.
 (This would require most of the seed data to be removed.)
+```
+
+## Extra
+The app is deployed to azure but the views are still being adjusted to work properly.
