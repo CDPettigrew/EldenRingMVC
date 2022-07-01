@@ -81,9 +81,9 @@
     <Compile Include="ArmorSet.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Location.cs" />
-    <Compile Include="Migrations\202205171947404_SeedDataOne.cs" />
-    <Compile Include="Migrations\202205171947404_SeedDataOne.designer.cs">
-      <DependentUpon>202205171947404_SeedDataOne.cs</DependentUpon>
+    <Compile Include="Migrations\202207012208064_one.cs" />
+    <Compile Include="Migrations\202207012208064_one.designer.cs">
+      <DependentUpon>202207012208064_one.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,8 +95,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202205171947404_SeedDataOne.resx">
-      <DependentUpon>202205171947404_SeedDataOne.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202207012208064_one.resx">
+      <DependentUpon>202207012208064_one.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

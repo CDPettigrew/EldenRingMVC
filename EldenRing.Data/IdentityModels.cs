@@ -54,9 +54,9 @@ namespace EldenRing.WebMVC.Models
                 .HasRequired(l => l.Location)
                 .WithMany()
                 .WillCascadeOnDelete(false);*/
-            modelBuilder
+            /*modelBuilder
                 .Conventions
-                .Remove<PluralizingTableNameConvention>();
+                .Remove<PluralizingTableNameConvention>();*/
             modelBuilder
                 .Configurations
                 .Add(new IdentityUserLoginConfiguration())
